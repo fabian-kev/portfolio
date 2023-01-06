@@ -1,0 +1,64 @@
+@import 'index';
+
+// .dark-panel {
+//     box-shadow: 0px 4px 10px #000000;
+//     background-color: #121212;
+//     .overlay {
+//         padding: 20px 30px 30px 30px;
+//         background-color: rgba($color: #ffffff, $alpha: 0.12);
+//     }
+// }
+
+
+
+.expertise-container {
+    background-color: #F2E7FE;
+    .expertise {
+        height: 12px;
+        background-color: $primaryColor;
+    }
+}
+.base-level-animation {
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+.expert-level {
+    @extend .base-level-animation;
+    animation-name: filling-100;
+   
+}
+
+.proficient-level {
+    animation-name: filling-80;
+    @extend .base-level-animation;
+}
+.competent-level {
+    animation-name: filling-60;
+    @extend .base-level-animation;
+}
+
+@keyframes filling-100 {
+    0% {
+        width:0%;
+    }
+    100% {
+        width:100%;
+    }
+}
+@keyframes filling-80 {
+    0% {
+        width:0%;
+    }
+    100% {
+        width:80%;
+    }
+}
+@keyframes filling-60 {
+    0% {
+        width:0%;
+    }
+    100% {
+        width:60%;
+    }
+}
+  

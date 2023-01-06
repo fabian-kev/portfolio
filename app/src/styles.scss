@@ -1,0 +1,138 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~bootstrap/dist/css/bootstrap.css"; 
+@import '~@angular/material/theming';
+@import 'index';
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+
+$backgroundColor: #292929;
+$whiteOnPrimary: "#FFFFFF";
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$portfolio-primary: mat-palette($material-amazing-purple);
+$portfolio-accent: mat-palette($mat-cyan, A200, A100, A400);
+
+
+// The warn palette is optional (defaults to red).
+$portfolio-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$portfolio-theme: mat-dark-theme((
+  color: (
+    primary: $portfolio-primary,
+    accent: $portfolio-accent,
+    warn: $portfolio-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, Monospace',
+  $display-4: mat-typography-level(34px, 48px, 400),
+  $display-2: mat-typography-level(60px, 48px, 200),
+  $display-3: mat-typography-level(48px, 48px, 400),
+  $headline: mat-typography-level(24px, 20px, 400),
+  $title: mat-typography-level(20px, 38px, 500),
+  $body-1: mat-typography-level(14px, 20px, 400),
+  $body-2: mat-typography-level(14px, 24px, 500),
+  $subheading-1: mat-typography-level(16px, 24px, 400),
+  $subheading-2: mat-typography-level(14px, 24px, 500),
+  $caption: mat-typography-level(12px, 24px, 400),
+);
+
+
+
+@include mat-base-typography($custom-typography);
+// $white-foreground: my-mat-light-theme-foreground(white);
+@include angular-material-theme($portfolio-theme);
+
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+  margin: 0; 
+  font-family: 'Roboto', "Helvetica Neue", sans-serif; 
+  background-color: $backgroundColor;
+  color:rgba($color: #FFFFFF, $alpha: 0.87);
+}
+
+
+// .mat-display-3 {
+//   line-height: 56px !important;
+//   letter-spacing: 1px !important;
+//   font-family: 'Roboto' !important;
+//   font-weight: $fwRegular !important;
+//   font-size: 40px !important;
+//   margin:0 !important;
+// }
+// .mat-body-1 {
+//   line-height: 24px !important;
+//   letter-spacing: 1px !important;
+//   font-family: 'Roboto' !important;
+//   font-weight: $fwRegular !important;
+//   font-size: 16px !important;
+//   color: $fgWhiteMedium;
+// }
+// .mat-body-2 {
+//   // @extend .body-2;
+// }
+
+
+.fg-primary {
+  color: $primaryColor200 !important;
+}
+
+.dark-panel {
+  box-shadow: 0px 4px 10px #000000;
+  background-color: #121212;
+  .overlay {
+      padding: 20px 30px 30px 30px;
+      background-color: rgba($color: #ffffff, $alpha: 0.12);
+  }
+}
+.portfolio-link {
+  @extend .mat-body-2;
+  color: $primaryColor;
+  cursor: pointer;
+}
+
+.portfolio-icon  { 
+  svg {
+      margin-right:10px;
+  }
+}
+
+.portfolio-hr {
+  height:1px;
+  background-color: $primaryColor;
+  border:none;
+  width:100%;
+}
+.portfolio-chip {
+  // @extend .mt-button;
+  font-size: 14px;
+  padding: 5px 12px;
+  background-color: rgba($color: #BB86FC, $alpha: 0.04);
+  display:inline-block;
+  border-radius: 20px;
+  color: $primaryColor;
+  margin-right:3px;
+  letter-spacing: 1px !important;
+  margin-bottom: 0.5em;
+}

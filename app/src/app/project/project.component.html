@@ -1,0 +1,53 @@
+<div class='mat-display-2 mt-5'>My Projects
+
+    <span class='portfolio-link float-right' routerLink="">Back to home</span>
+</div>
+<div class='mat-caption'>These are the projects that I made and being part of since 2017</div>
+<div class='dark-panel mt-5' *ngFor="let project of projects">
+    <div class='overlay'>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <a [href]="project.websiteLink" target="_blank">
+                    <img [src]="project.imageSrc" alt="" class='img-fluid rounded'>
+                </a>
+               
+            </div>
+            <div class="col">
+                <div class='mat-title'>{{project.name}}</div>
+                <p class='mat-body-1' [innerHtml]="project.description"></p>
+                <span class='mat-body-2'>Technology Stack: </span>
+                <div class="portfolio-chip" *ngFor="let stack of project.techStacks">{{stack}}</div>
+                <!-- <div class="portfolio-chip">Java</div> -->
+                
+                <div class ='mt-4'>
+                    <span class='mat-body-2'>Company: </span> <span class = 'mat-body-1'>{{project.company}}</span>
+                </div>
+              
+                <span class='portfolio-link d-block'><a [href]="project.websiteLink" target="_blank">Visit the actual
+                        website</a></span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<ng-go-top-button 
+                 [animate]="true"
+                 [speed]="50"
+                 [acceleration]="2"
+                 [scrollDistance]="300"
+                 [styles]="{
+                    'right': '7em',
+                    'border': 'none',
+                    'background':'none',
+                    'top': '80%',
+                    'width':0,
+                    'height': 0,
+                    'padding': '0px'
+                 }"
+         
+                 >
+                 <svg xmlns="http://www.w3.org/2000/svg" width="30.698" height="31.504" viewBox="0 0 30.698 31.504">
+                    <path id="Icon_awesome-arrow-up" data-name="Icon awesome-arrow-up" d="M2.454,20.355.893,18.795a1.681,1.681,0,0,1,0-2.384L14.555,2.742a1.681,1.681,0,0,1,2.384,0L30.6,16.4a1.681,1.681,0,0,1,0,2.384l-1.561,1.561a1.689,1.689,0,0,1-2.412-.028l-8.065-8.466V32.063a1.683,1.683,0,0,1-1.687,1.688h-2.25a1.683,1.683,0,0,1-1.687-1.687V11.855L4.866,20.327a1.677,1.677,0,0,1-2.412.028Z" transform="translate(-0.397 -2.246)" fill="#bb86fc"/>
+                  </svg>
+                  
+  </ng-go-top-button>
