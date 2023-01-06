@@ -13,7 +13,7 @@ jobs:
         node-version: [15.12.0]
     
     steps:
-      - name: Checkout
+      - name: Checkoutf
         uses: actions/checkout@v3
 
       - name: Install and build
