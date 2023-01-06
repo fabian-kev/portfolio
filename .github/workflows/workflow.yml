@@ -14,19 +14,11 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-
-
-      # - run: npm ci
+        uses: actions/checkout@v2
       - name: Install and build
         working-directory: ./app
-
         run: |
             npm install && npm run gh-build
-            pwd
-            ls
-            
-      
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
