@@ -11,7 +11,7 @@ export class ProjectService {
         This is my current project, I've been working here as Backend Java Spring Boot developer. my daily responsibilities here are continuous developing microservices, creating AWS lambdas, support QE, optimize and update existing microservices, collab with others, sharing ideas, performing burp scan, load testing,
         document the services.
       `,
-      imageSrc:"../../assets/images/paymaya.jpg",
+      imageSrc:"/portfolio/assets/images/paymaya.jpg",
       company :"Collabera Inc.", 
       websiteLink: "https://play.google.com/store/apps/details?id=com.paymaya&hl=en_ZA&gl=US",
       techStacks: [
@@ -77,7 +77,6 @@ export class ProjectService {
     },
     {
       "name": "GetGoPay",
-      // "description":"",
       "description": `
         I worked here for 1 year+, I developed several internal apis and integrated such as instapay, cash in via UBP, optimized jumio implementation and other existing apis. 
       `,
