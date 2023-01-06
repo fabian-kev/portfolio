@@ -1,0 +1,27 @@
+
+// Font Weights
+$fwLight:lighter;
+$fwRegular:400;
+$fwSemiBold:550;
+$fwBold:700;
+
+
+
+//color
+$fgWhitePrimary: #FFFFFF;
+$fgWhiteMedium:rgba(#FFFFFF, 87%);
+
+
+
+
+//material color
+$primaryColor200: #BB86FC;
+$primaryColor100: lighten($primaryColor200, 10%);
+$primaryColor50: lighten($primaryColor200, 5%);
+
+
+$primaryColor: $primaryColor200;
+
+
+
+
