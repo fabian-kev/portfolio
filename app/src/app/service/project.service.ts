@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class ProjectService {
         This is my current project, I've been working here as Backend Java Spring Boot developer. my daily responsibilities here are continuous developing microservices, creating AWS lambdas, support QE, optimize and update existing microservices, collab with others, sharing ideas, performing burp scan, load testing,
         document the services.
       `,
-      imageSrc:"/portfolio/assets/images/paymaya.jpg",
+      imageSrc: environment.host+"/assets/images/paymaya.jpg",
       company :"Collabera Inc.", 
       websiteLink: "https://play.google.com/store/apps/details?id=com.paymaya&hl=en_ZA&gl=US",
       techStacks: [
@@ -52,7 +53,7 @@ export class ProjectService {
       I worked here for 1 year+ in work from home setup. I developed & integrated some apis here, update some apis and also add api versioning for backward compatibility.
       optimized some existing api by implementing caching and removing redundant repository/remote api call.`
       ,
-      "imageSrc":"../../assets/images/ub.PNG",
+      "imageSrc": `${environment.host}/assets/images/ub.PNG`,
       "websiteLink":"https://online.unionbankph.com/online-banking",
       "company" :"Whitecloak Technology Inc.", 
       "techStacks": [

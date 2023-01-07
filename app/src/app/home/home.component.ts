@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { ProjectService } from '../service/project.service';
 
 @Component({
@@ -280,7 +281,7 @@ export class HomeComponent implements OnInit {
     }
   ]
   public socialMediaLinks;
-
+  public host = environment.host
 
 
   constructor(private projectService:ProjectService) {
