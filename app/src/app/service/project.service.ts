@@ -12,7 +12,7 @@ export class ProjectService {
         This is my current project, I've been working here as Backend Java Spring Boot developer. my daily responsibilities here are continuous developing microservices, creating AWS lambdas, support QE, optimize and update existing microservices, collab with others, sharing ideas, performing burp scan, load testing,
         document the services.
       `,
-      imageSrc: environment.host+"/assets/images/paymaya.jpg",
+      imageSrc: "/assets/images/paymaya.jpg",
       company :"Collabera Inc.", 
       websiteLink: "https://play.google.com/store/apps/details?id=com.paymaya&hl=en_ZA&gl=US",
       techStacks: [
@@ -53,7 +53,7 @@ export class ProjectService {
       I worked here for 1 year+ in work from home setup. I developed & integrated some apis here, update some apis and also add api versioning for backward compatibility.
       optimized some existing api by implementing caching and removing redundant repository/remote api call.`
       ,
-      "imageSrc": `${environment.host}/assets/images/ub.PNG`,
+      "imageSrc": "/assets/images/ub.PNG",
       "websiteLink":"https://online.unionbankph.com/online-banking",
       "company" :"Whitecloak Technology Inc.", 
       "techStacks": [
@@ -81,7 +81,7 @@ export class ProjectService {
       "description": `
         I worked here for 1 year+, I developed several internal apis and integrated such as instapay, cash in via UBP, optimized jumio implementation and other existing apis. 
       `,
-      "imageSrc":"../../assets/images/getgo.PNG",
+      "imageSrc":"/assets/images/getgo.PNG",
       "websiteLink":"https://www.getgopay.com.ph/",
       "company" :"Whitecloak Technology Inc.", 
       "techStacks": [
@@ -117,7 +117,7 @@ export class ProjectService {
        We started this project from the scratch. We used spring boot + angular to develop this website and the apis.
        We handled the huge amount of data by indexing and implementing spring caching.
       `,
-      "imageSrc":"../../assets/images/tradestats.PNG",
+      "imageSrc":"/assets/images/tradestats.PNG",
       "websiteLink":"http://www.tradelinephilippines.dti.gov.ph:8080/",
       "company" :"Ziaplex Inc.", 
       "techStacks": [
@@ -138,7 +138,7 @@ export class ProjectService {
     {
       "name": "CityWash",
       "description": "This project is made by Wordpress it is short term project like 1 - 2 weeks development.",
-      "imageSrc":"../../assets/images/citywash.PNG",
+      "imageSrc":"/assets/images/citywash.PNG",
       "websiteLink":"https://citywash.com.sg/",
       "company" :"Firstcom Solution Inc.", 
       "techStacks": [
@@ -153,7 +153,7 @@ export class ProjectService {
     {
       "name": "Enetek",
       "description": "This project is made by Wordpress it is short term project like 1 - 2 weeks development.",
-      "imageSrc":"../../assets/images/enetek.PNG",
+      "imageSrc":"/assets/images/enetek.PNG",
       "websiteLink":"https://www.enetek-power.com/",
       "company" :"Firstcom Solution Inc.", 
       "techStacks": [
@@ -168,7 +168,7 @@ export class ProjectService {
     {
       "name": "Pacc Line",
       "description": "This project is made by Wordpress it is short term project like 1 - 2 weeks development",
-      "imageSrc":"../../assets/images/pacc.PNG",
+      "imageSrc":"/assets/images/pacc.PNG",
       "websiteLink":"http://www.pacc.com.sg/",
       "company" :"Firstcom Solution Inc.", 
       "techStacks": [
@@ -183,7 +183,7 @@ export class ProjectService {
     {
       "name": "QB Printing",
       "description": "This project is made by Opencart it is short term project like 1 - 2 weeks development.",
-      "imageSrc":"../../assets/images/qb.PNG",
+      "imageSrc":"/assets/images/qb.PNG",
       "websiteLink":"https://qbprinting.com/",
       "company" :"Firstcom Solution Inc.", 
       "techStacks": [
@@ -199,7 +199,7 @@ export class ProjectService {
     {
       "name": "Cryoviva",
       "description": "This project is made by Wordpress it is short term project like 1 - 2 weeks development.",
-      "imageSrc":"../../assets/images/cryoviva.PNG",
+      "imageSrc":"/assets/images/cryoviva.PNG",
       "websiteLink":"https://cryoviva.com.sg/",
       "company" :"Firstcom Solution Inc.", 
       "techStacks": [
@@ -214,7 +214,7 @@ export class ProjectService {
     {
       "name": "Shiro-wa",
       "description": "This project is made by Opencart it is short term project like 1 - 2 weeks development.",
-      "imageSrc":"../../assets/images/shirowa.PNG",
+      "imageSrc":"/assets/images/shirowa.PNG",
       "websiteLink":"https://shirowa-global.com/",
       "company" :"Firstcom Solution Inc.",    
       "techStacks": [
@@ -229,7 +229,7 @@ export class ProjectService {
     {
       "name": "Emtech",
       "description": "This project is made by Opencart it is short term project like 1 - 2 weeks development.",
-      "imageSrc":"../../assets/images/emtech.PNG",
+      "imageSrc":"/assets/images/emtech.PNG",
       "websiteLink":"http://www.emtechinternational.com/",
       "company" :"Firstcom Solution Inc.", 
       "techStacks": [
@@ -255,6 +255,7 @@ export class ProjectService {
   }
 
   getProjects(){
+    this.projects.map(project => project.imageSrc = `${environment.host}${project.imageSrc}`)
     return this.projects;
   }
 
