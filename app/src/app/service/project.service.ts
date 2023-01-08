@@ -251,11 +251,10 @@ export class ProjectService {
   }
   
   constructor() { 
-    console.log("Number of projects: " + this.projects.length)
+    this.projects.map(project => project.imageSrc = `${environment.host}${project.imageSrc}`)
   }
 
   getProjects(){
-    this.projects.map(project => project.imageSrc = `${environment.host}${project.imageSrc}`)
     return this.projects;
   }
 
