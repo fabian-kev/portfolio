@@ -290,7 +290,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.projects = this.projectService.getProjects().slice(0,3);
     this.socialMediaLinks = this.projectService.getSocialMediaLinks();
-    this.profilePicImageSrc = `${environment.host}/assets/images/profile1.jpg`
+    this.profilePicImageSrc = `${environment.host}/assets/images/profile1.png`
   }
 
 
